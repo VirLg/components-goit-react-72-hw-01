@@ -1,8 +1,12 @@
 import PropTypes from 'prop-types'
 import css from "./BaseTitle.module.css";
 
-export const  BaseTitle = function ({text}){
-    return <h2 className={css.title}>Upload stats</h2>
+export const  BaseTitle = function ({title}){
+    return(
+        <>
+        {title && <h2 className={css.title}>{title}</h2>}
+        </>) 
+
 }
 
 BaseTitle.propTypes={

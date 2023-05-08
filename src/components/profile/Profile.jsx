@@ -2,8 +2,8 @@ import PropTypes from 'prop-types'
 import{PhotoHero,TitleCard,StatisticBlock,StaStatisticBlockticItem,SpanStat, Card} from './Profile.styled';
 
 
-export const Profile=function({item}){
-  const {username,tag,location,avatar,stats}=item
+export const Profile=function({username,tag,location,avatar,stats}){
+  
     return(<Card>
         <div>
           <PhotoHero 
@@ -12,7 +12,7 @@ export const Profile=function({item}){
             // className="avatar"
           />
           <TitleCard >{username}</TitleCard>
-          <TitleCard >{tag}</TitleCard>
+          <TitleCard >@ {tag}</TitleCard>
           <TitleCard >{location}</TitleCard>
         </div>
       
