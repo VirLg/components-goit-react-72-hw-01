@@ -1,12 +1,12 @@
 import './App.css';
 
 import { Profile } from './components/profile/Profile';
-import user from './components/data/userData.json';
+import userData from './components/data/userData.json';
 
 import {EventBoard,BaseTitle} from './components/statistic/utils';
 import data from './components/data/data.json';
 
-import {DesckList} from './components/friendList/DesckList/DesckList';
+import {DesckList} from './components/friendList/DesckList';
 import friends from './components/data/friends.json';
 
 
@@ -21,7 +21,7 @@ export default function App() {
   return (
       <>
     <div>
-      <Profile item={user} />
+      <Profile item={userData} />
     </div>
 
     <>
