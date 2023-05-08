@@ -18,3 +18,4 @@ export const EventCard=styled.ul`
 justify-content: center;
 `
 
+

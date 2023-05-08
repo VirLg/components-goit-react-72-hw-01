@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import CreateItemMarkup from "../Item/Item"
+
 
 import {Item,EventCard} from './EventBoard.styled';
 
@@ -7,15 +7,16 @@ import {Item,EventCard} from './EventBoard.styled';
 
 // console.log(data);
 export const  EventBoard=function({items}){
+  
 return (
     
     <EventCard >
-        {items.map(item=>(
-        <Item  key={item.id}>
-            <CreateItemMarkup
-            label={item.label}
-            percentage={item.percentage}
-            background-color="red" />
+        {items.map(({id,label,percentage})=>(
+        <Item  key={id} >
+             
+            <span className="label">{label}</span>
+            <span className="percentage"> {percentage} %</span>
+        
         </Item>))}
 
     </EventCard>
@@ -24,6 +25,8 @@ return (
 EventBoard.propTypes={
     items:PropTypes.arrayOf(PropTypes.shape({
         id:PropTypes.string.isRequired,
+        percentage:PropTypes.number.isRequired,
+        label:PropTypes.string.isRequired,
     }))
     }
 

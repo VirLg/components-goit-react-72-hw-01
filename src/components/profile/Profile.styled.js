@@ -1,6 +1,5 @@
 import styled from "@emotion/styled";
 
-
 export const StatisticBlock = styled.div`
 // background-color:teal;
 display:grid;
@@ -38,5 +37,12 @@ text-align: center;
 
 export const Card=styled.div`
 outline: 1px solid blacK;
+
+width:300px;
+height:342px;
+margin-left:auto;
+margin-right:auto;
 padding-top:20px;
+// padding-left:20px;
+// padding-right:20px;
 `
